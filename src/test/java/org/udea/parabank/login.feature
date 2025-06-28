@@ -7,7 +7,7 @@ Feature: Login to Parabank
 
   Scenario: Customer Login
     Given path 'users/login'
-    And request {"email": "joeaoi@mail.com", "password", "12345678"}
+    And request {"email": "joeaoi@mail.com", "password": "12345678"}
     When method POST
     Then status 200
     And match response ==
@@ -18,8 +18,8 @@ Feature: Login to Parabank
         "firstName": '#string',
         "lastName": '#string',
         "email": '#string',
-        "__v": '#number'
+        "__v": '#number',
     },
-    "token": '#string'
+    "token": '#string',
     }
     """
